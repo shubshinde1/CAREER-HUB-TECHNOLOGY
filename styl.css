@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-transition {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+.hvr1:hover {
+    scale: 1.030;
+    transition-duration: .4s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    font-weight: bold;
+}
+
+.hvr2 {
+    background-color: rgb(236, 236, 236);
+}
+
+.hvr2:hover {
+    scale: 1.030;
+    transition-duration: .4s;
+    font-weight: 800;
+    color: aliceblue;
+    background-color: #F58634;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    /* border: 2px solid black; */
+    /* opacity: 0.7; */
+}
+
+.hvr3:hover {
+    transition-duration: .4s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 15px;
+}
+
+.hvr4 {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(236, 236, 236);
+}
+
+.card-body {
+    position: relative;
+    z-index: 1;
+    /* Ensure the inner content is above pseudo-elements */
+}
+
+.hvr4::before,
+.hvr4::after {
+    content: "";
+    position: absolute;
+    background-color: #F58634;
+    /* opacity: 0.5; */
+    height: 0;
+    width: 100%;
+    transition: height 0.4s ease;
+}
+
+.hvr4::before {
+    top: 0;
+    right: 0;
+    /* Adjusted to come from top-right */
+}
+
+.hvr4::after {
+    bottom: 0;
+    left: 0;
+    /* Adjusted to come from bottom-left */
+}
+
+.hvr4:hover::before,
+.hvr4:hover::after {
+    height: 50%;
+}
+
+.hvr4:hover {
+    font-weight: 800;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.ttl {
+    color: #F58634;
+}
+
+.ftorange {
+    color: orange;
+}
+
+.Montserrat {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.Montserratbold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.read-more-content {
+    display: none;
+}
+
+.read-more-btn {
+    cursor: pointer;
+    color: #F58634;
+}
+
+
+.reveal {
+    background-color: none;
+    position: relative;
+    transform: translateY(167px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    /* transform: translatex(0px); */
+    opacity: 1;
+    background-color: white;
+    color: black;
+    /* margin-top: 1rem; */
+}
